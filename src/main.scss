@@ -1,0 +1,537 @@
+// Reset
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+// Mixins
+@mixin flex-center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Variables
+$verde-claro : rgb(131, 212, 9);
+
+
+body{
+    background-color: black;
+    color: white;
+}
+
+// Header
+.texto_header{
+    text-align: center;
+    .header__titulo{
+        padding: 10px;
+        margin: 15px;
+        color: $verde-claro;
+    }
+    &>a{
+        text-decoration: none;
+    }
+    .header__titulo:hover{
+        transform: translateY(-5px);
+        transition-duration: 0.5s;
+    }
+}
+// Nav
+.barra_nav{
+    display: flex;
+    justify-content: center;
+    .nav__lista{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        .lista__li>a{
+            font-size: 16px;
+            color: $verde-claro;
+            text-decoration: none;
+        }
+
+        .lista__li:hover{
+            transform: translateY(-5px);
+            transition-duration: 0.5s;
+        }
+    }
+}
+// .bars__menu{
+//     width: 50px;
+//     height: 50px;
+//     border: 2px solid red;
+//     margin: 0 auto;
+//     display: none;
+//     cursor: pointer;
+//     &>span{
+//         display: block;
+//         width: 100%;
+//         height: 4px;
+//         background-color: $verde-claro;
+//         transition: all 600ms;
+//         transform-origin: 0px 100%;
+//         border-radius: 10px;
+//     }
+// }
+
+// .menu_active{
+//     display: flex;
+//     flex-flow: column wrap;
+//     justify-content: space-around;
+//     align-items: center;
+// }
+
+// .activeline_bar1 {
+//     transform: rotate(45deg);
+//     margin-left: 5px;
+//     margin-bottom: 5px;
+//     margin-right: 5px;
+// }
+// .activeline_bar2 {
+//     opacity: 0;
+//     margin-left: -50px;
+// }
+// .activeline_bar3 {
+//     transform: rotate(-45deg)translate(-4px,2px);
+//     margin-left: 10px;
+//     margin-bottom: 6px;
+// }
+
+
+// Principal
+.principal__container{
+    display: flex;
+    justify-content: center;
+    background-image: url(../assets/img/img_principal.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    @include flex-center();
+    .principal{
+        text-align: center;
+        max-width: 60%;
+    }
+    .principal__texto{
+        font-size: 16px;
+    }
+}
+
+.destacados{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tarjeta{
+    border: 2px solid $verde-claro;
+    border-radius: 10px;
+    background-color: rgba(0, 128, 0, 0.29);
+    width: 16rem;
+    height: 32rem;
+    @include flex-center();
+    flex-flow: column wrap;
+    margin: 10px;
+
+    @keyframes tarjeta-hover {
+        0%{
+        }
+        
+        50%{
+            border-left: none;
+            border-right: none;
+        }
+        100%{
+            border: none;
+        }
+    }
+
+    &:hover{
+        animation: both;
+        animation-name: tarjeta-hover;
+        animation-duration: 2s;
+    }
+
+    .tarjeta__img>img{
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        object-fit: cover;
+    }
+
+    .tarjeta__titulo{
+        text-align: center;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .tarjeta__precio{
+        text-align: center;
+    }
+
+    .tarjeta__boton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        width: 40%;
+        .boton__compra>a{
+            text-decoration: none;
+            color: $verde-claro;
+            font-size: 12px;
+        }
+    }
+
+    @keyframes boton-hover {
+        0%{
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+        }
+
+        50%{
+            border-bottom: 2px solid $verde-claro;
+            border-top: 2px solid $verde-claro;
+        }
+
+        100%{
+            background-color: rgba(255, 255, 255, 0);
+        }
+    }
+
+    .tarjeta__boton:hover{
+        animation: both;
+        animation-name: boton-hover;
+        animation-duration: 1.5s;
+        .boton__compra>a:hover{
+            color: $verde-claro;
+        }
+    }
+    .tarjeta__info{
+        text-align: center;
+        padding: 5px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+
+.pie{
+    background-color: $verde-claro;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    .titulo_pie{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px
+    }
+}
+
+.combos_titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.promos{
+    margin: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .tarjeta_promos{
+        width: 45%;
+        height: 30rem;
+        padding: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 128, 0, 0.29);
+        border: 2px solid $verde-claro;
+        border-radius: 3px;
+    }
+
+    .titulo_tarjeta_promos{
+        text-align: center;
+        padding: 10px;
+        font-size: 20px
+    }
+
+    .img_tarjeta_promos{
+        width: 100%;
+        height: 16rem;
+        &>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .boton_tarjeta_promos{
+        padding: 10px;
+        .boton_promo_container{
+            padding: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            
+            &:hover{
+                animation: both;
+                animation-name: boton-hover;
+                animation-duration: 1.5s;
+            }
+            &>a{
+                text-decoration: none;
+                color: $verde-claro;
+            }
+        }
+    }
+
+    .info_tarjeta_promos{
+        text-align: center;
+        font-size: 14px;
+        padding: 5px
+    }
+}
+
+.redes{
+    // border: 2px solid black;
+    @include flex-center();
+    flex-flow: column wrap;
+
+    .redes__titulo{
+        padding:6px;
+        font-size: 18px
+    }
+
+    .redes__link{
+        @include flex-center();
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 10px;
+        width: 50%;
+        padding: 10px;
+    }
+
+    .redes__link>a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    .icono_div{
+        @include flex-center();
+        flex-flow: column wrap;
+        .icono__redes{
+            width: 30px;
+        }
+
+        &:hover{
+            transform: translateY(-10px);
+            transition-duration: 1s;
+        }
+
+        &>label{
+            font-size: 14px
+        }
+    }
+}    
+
+.titulo__contacto{
+    @include flex-center();
+    margin: 10px
+}
+
+.form__container{
+    @include flex-center();
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    .form__input{
+        @include flex-center();
+        flex-flow: column wrap;
+        padding: 10px;
+    }
+}
+
+.map_container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .titulo{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+// --NOSOTROS--
+
+.info_nosotros{
+    @include flex-center();
+    flex-flow: column wrap;
+
+    .titulo_info{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .parrafo_info{
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+.productos_teclados,.productos_mouses{
+    @include flex-center();
+    flex-flow: row wrap;
+    .titulo_teclados,.titulo_mouses{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:360px){
+    .nav__lista{
+        flex-flow: row wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width:770px) {
+    .principal{
+        .principal__texto{
+            font-size: 18px;
+        }
+    }
+    .texto_header{
+        .header__titulo{
+            margin: 5px;
+        }
+    }
+    .nav__lista{
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width:410px){
+    .redes{
+        .redes__titulo{
+            padding: 8px
+        }
+    }
+    .pie>h4{
+        text-align: center;
+    } 
+}
+
+// @media (max-width:475px){
+//     .nav__lista>li{
+//         font-size: 10px;
+//     }
+// }
+
+// @media (max-width:460px) {
+//     .principal{
+//         .principal__texto{
+//             font-size: 16px;
+//         }
+//     }
+//     .principal{
+//         .principal__texto{
+//             font-size: 14px;
+//         }
+//     }
+//     .texto_header{
+//         .header__titulo{
+//             margin: 0px;
+//         }
+//     }
+//     .nav__lista{
+//         padding: 10px;
+//     }
+// }
+
+
+
+@media (max-width:860px){
+    .barra_nav{
+        .nav__lista{
+            .lista__li>a{
+                font-size: 14px;
+            }
+        }
+    }
+
+    .principal__container{
+        .principal{
+            
+            .principal__titulo{
+                font-size: 20px;
+            }
+
+            .principal__texto{
+                font-size: 12px;
+            }
+        }
+        
+    }
+    
+    .tarjeta{
+        width: 16rem;
+        height: 27rem;
+        .tarjeta__titulo{
+            padding: 5px;
+        }
+        .tarjeta__boton{
+            .boton__compra>a{
+                font-size: 16px;
+            }
+        }
+        .tarjeta__info{
+            text-align: center;
+            padding: 0px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media(max-width:1015px){
+    .principal__container{
+        .principal__texto{
+            font-size: 13px;
+        }
+    }
+
+    .tarjeta{
+        .tarjeta__boton{
+            .boton__compra>a{
+                font-size: 12px;
+            }
+        }
+        .tarjeta__info{
+            font-size: 10px;
+        }
+    }
+}
+

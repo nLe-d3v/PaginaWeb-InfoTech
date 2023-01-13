@@ -1,0 +1,49 @@
+/* Paleta de colores , verde y negro */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.header__titulo{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.nav__lista{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    border: 2px solid white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lista__li>a{
+    color: white;
+    text-decoration: none;
+}
+
+#principal__container{
+    background-image: url(../assets/img/img_principal.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.principal{
+    margin-top:10%;
+
+}
+
+.pie{
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
