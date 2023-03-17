@@ -158,7 +158,7 @@ body{
     &:hover{
         animation: both;
         animation-name: tarjeta-hover;
-        animation-duration: 2s;
+        animation-duration: 1.5s;
     }
 
     .tarjeta__img>img{
@@ -213,7 +213,7 @@ body{
     .tarjeta__boton:hover{
         animation: both;
         animation-name: boton-hover;
-        animation-duration: 1.5s;
+        animation-duration: 0.5s;
         .boton__compra>a:hover{
             color: $verde-claro;
         }
@@ -227,17 +227,7 @@ body{
 }
 
 
-.pie{
-    background-color: $verde-claro;
-    color: black;
-    text-align: center;
-    padding: 5px;
-    .titulo_pie{
-        display: flex;
-        justify-content: center;
-        margin-top: 30px
-    }
-}
+
 
 .combos_titulo{
     display: flex;
@@ -247,7 +237,8 @@ body{
 }
 
 .promos{
-    margin: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -311,48 +302,73 @@ body{
     }
 }
 
-.redes{
-    // border: 2px solid black;
-    @include flex-center();
-    flex-flow: column wrap;
-
-    .redes__titulo{
-        padding:6px;
-        font-size: 18px
+.pie{
+    background-color: $verde-claro;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    .titulo_pie{
+        margin-top: 50px;
+        text-align: center;
+        width: 100%;
     }
-
-    .redes__link{
-        @include flex-center();
-        flex-flow: row wrap;
-        justify-content: space-around;
-        gap: 10px;
-        width: 50%;
-        padding: 10px;
-    }
-
-    .redes__link>a{
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-    }
-
-    .icono_div{
+    .redes{
         @include flex-center();
         flex-flow: column wrap;
-        .icono__redes{
-            width: 30px;
+        width: 50%;
+        .redes__titulo{
+            padding:6px;
+            font-size: 18px
         }
-
-        &:hover{
-            transform: translateY(-10px);
-            transition-duration: 1s;
+        .redes__link{
+            @include flex-center();
+            flex-flow: row wrap;
+            justify-content: space-around;
+            gap: 10px;
+            width: 100%;
+            padding: 10px;
         }
-
-        &>label{
-            font-size: 14px
+    
+        .redes__link>a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+    
+        .icono_div{
+            @include flex-center();
+            flex-flow: column wrap;
+            .icono__redes{
+                width: 30px;
+            }
+    
+            &:hover{
+                transform: translateY(-10px);
+                transition-duration: 1s;
+            }
+    
+            &>label{
+                font-size: 14px
+            }
         }
     }
-}    
+    .newsletter{
+        display: flex;
+        flex-flow: column wrap;
+        width: 50%;
+        padding: 10px;
+
+        .newsletter_titulo{
+            padding: 10px;
+        }
+        .newsletter_form{
+            padding: 5px;
+        }
+    }   
+} 
+
 
 .titulo__contacto{
     @include flex-center();

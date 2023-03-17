@@ -101,7 +101,7 @@ body {
 .tarjeta:hover {
   animation: both;
   animation-name: tarjeta-hover;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
 }
 .tarjeta .tarjeta__img > img {
   width: 100%;
@@ -148,7 +148,7 @@ body {
 .tarjeta .tarjeta__boton:hover {
   animation: both;
   animation-name: boton-hover;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 .tarjeta .tarjeta__boton:hover .boton__compra > a:hover {
   color: rgb(131, 212, 9);
@@ -160,18 +160,6 @@ body {
   line-height: 20px;
 }
 
-.pie {
-  background-color: rgb(131, 212, 9);
-  color: black;
-  text-align: center;
-  padding: 5px;
-}
-.pie .titulo_pie {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
 .combos_titulo {
   display: flex;
   justify-content: center;
@@ -180,7 +168,8 @@ body {
 }
 
 .promos {
-  margin: 10px;
+  padding: 10px;
+  margin-bottom: 40px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -239,46 +228,72 @@ body {
   padding: 5px;
 }
 
-.redes {
+.pie {
+  background-color: rgb(131, 212, 9);
+  color: black;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.pie .titulo_pie {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+.pie .redes {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+  width: 50%;
 }
-.redes .redes__titulo {
+.pie .redes .redes__titulo {
   padding: 6px;
   font-size: 18px;
 }
-.redes .redes__link {
+.pie .redes .redes__link {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 10px;
-  width: 50%;
+  width: 100%;
   padding: 10px;
 }
-.redes .redes__link > a {
+.pie .redes .redes__link > a {
   text-decoration: none;
   color: black;
   font-size: 16px;
 }
-.redes .icono_div {
+.pie .redes .icono_div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
 }
-.redes .icono_div .icono__redes {
+.pie .redes .icono_div .icono__redes {
   width: 30px;
 }
-.redes .icono_div:hover {
+.pie .redes .icono_div:hover {
   transform: translateY(-10px);
   transition-duration: 1s;
 }
-.redes .icono_div > label {
+.pie .redes .icono_div > label {
   font-size: 14px;
+}
+.pie .newsletter {
+  display: flex;
+  flex-flow: column wrap;
+  width: 50%;
+  padding: 10px;
+}
+.pie .newsletter .newsletter_titulo {
+  padding: 10px;
+}
+.pie .newsletter .newsletter_form {
+  padding: 5px;
 }
 
 .titulo__contacto {
