@@ -9,54 +9,77 @@ body {
   color: white;
 }
 
-.texto_header {
+header .texto_header {
   text-align: center;
 }
-.texto_header .header__titulo {
-  padding: 10px;
-  margin: 15px;
+header .texto_header .header__titulo {
+  padding: 15px;
   color: rgb(131, 212, 9);
 }
-.texto_header > a {
+header .texto_header > a {
   text-decoration: none;
 }
-.texto_header .header__titulo:hover {
+header .texto_header .header__titulo:hover {
   transform: translateY(-5px);
   transition-duration: 0.5s;
 }
-
-.barra_nav {
+header .search_header {
+  background-color: #0b1f08;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
-.barra_nav .nav__lista {
+header .search_header > input {
+  width: 50%;
+  height: 35px;
+}
+header .barra_nav {
+  background-color: #153f0f;
+}
+header .barra_nav .nav__lista {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
   width: 100%;
+  margin: 10px;
 }
-.barra_nav .nav__lista .lista__li > a {
-  font-size: 16px;
+header .barra_nav .nav__lista .lista__li > a {
+  font-size: 18px;
   color: rgb(131, 212, 9);
   text-decoration: none;
 }
-.barra_nav .nav__lista .lista__li:hover {
+header .barra_nav .nav__lista .lista__li:hover {
   transform: translateY(-5px);
   transition-duration: 0.5s;
+}
+header .header_ayuda {
+  background-color: #205e17;
+  padding: 10px;
+}
+header .header_ayuda .ayuda_lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+header .header_ayuda .ayuda_lista > li > a {
+  text-decoration: none;
+  color: white;
 }
 
 .principal__container {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url(../assets/img/img_principal.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 500px;
 }
 .principal__container .principal {
   text-align: center;
@@ -64,6 +87,7 @@ body {
 }
 .principal__container .principal__texto {
   font-size: 16px;
+  line-height: 40px;
 }
 
 .destacados {
@@ -343,6 +367,19 @@ body {
 .info_nosotros .parrafo_info {
   text-align: center;
   padding: 10px;
+}
+
+.img_nosotros {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.img_nosotros > img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .productos_teclados, .productos_mouses {
