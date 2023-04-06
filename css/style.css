@@ -70,6 +70,10 @@ header .header_ayuda .ayuda_lista > li > a {
   text-decoration: none;
   color: white;
 }
+header .header_ayuda .ayuda_lista > li:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.5s;
+}
 
 .principal__container {
   display: flex;
@@ -90,15 +94,26 @@ header .header_ayuda .ayuda_lista > li > a {
   line-height: 40px;
 }
 
-.destacados {
+.secondary_container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  flex-flow: column nowrap;
+  background-color: black;
+  height: 600px;
+}
+.secondary_container .titulo_secondary {
+  text-align: center;
+  width: 60%;
+  margin-bottom: 20px;
+}
+.secondary_container .texto_secondary {
+  max-width: 60%;
+  font-size: 16px;
+}
+.secondary_container .texto_secondary > p {
+  line-height: 40px;
+  text-align: center;
 }
 
 .tarjeta {
@@ -184,74 +199,6 @@ header .header_ayuda .ayuda_lista > li > a {
   line-height: 20px;
 }
 
-.combos_titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.promos {
-  padding: 10px;
-  margin-bottom: 40px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.promos .tarjeta_promos {
-  width: 45%;
-  height: 30rem;
-  padding: 10px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 128, 0, 0.29);
-  border: 2px solid rgb(131, 212, 9);
-  border-radius: 3px;
-}
-.promos .titulo_tarjeta_promos {
-  text-align: center;
-  padding: 10px;
-  font-size: 20px;
-}
-.promos .img_tarjeta_promos {
-  width: 100%;
-  height: 16rem;
-}
-.promos .img_tarjeta_promos > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.promos .boton_tarjeta_promos {
-  padding: 10px;
-}
-.promos .boton_tarjeta_promos .boton_promo_container {
-  padding: 10px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-.promos .boton_tarjeta_promos .boton_promo_container:hover {
-  animation: both;
-  animation-name: boton-hover;
-  animation-duration: 1.5s;
-}
-.promos .boton_tarjeta_promos .boton_promo_container > a {
-  text-decoration: none;
-  color: rgb(131, 212, 9);
-}
-.promos .info_tarjeta_promos {
-  text-align: center;
-  font-size: 14px;
-  padding: 5px;
-}
-
 .pie {
   background-color: rgb(131, 212, 9);
   color: black;
@@ -270,7 +217,8 @@ header .header_ayuda .ayuda_lista > li > a {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  width: 50%;
+  width: 33%;
+  padding: 10px;
 }
 .pie .redes .redes__titulo {
   padding: 6px;
@@ -309,15 +257,35 @@ header .header_ayuda .ayuda_lista > li > a {
 }
 .pie .newsletter {
   display: flex;
-  flex-flow: column wrap;
-  width: 50%;
+  flex-flow: column nowrap;
+  width: 33%;
   padding: 10px;
 }
 .pie .newsletter .newsletter_titulo {
   padding: 10px;
 }
-.pie .newsletter .newsletter_form {
+.pie .newsletter .newsletter_mail {
   padding: 5px;
+}
+.pie .newsletter .newsletter_submit {
+  padding: 10px;
+}
+.pie .horario {
+  display: flex;
+  flex-flow: column wrap;
+  width: 33%;
+  padding: 10px;
+}
+.pie .horario .horario_titulo {
+  padding: 10px;
+}
+.pie .horario .horario_normal {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pie .horario .horario_finde {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .titulo__contacto {
@@ -382,13 +350,17 @@ header .header_ayuda .ayuda_lista > li > a {
   object-fit: cover;
 }
 
-.productos_teclados, .productos_mouses {
+.productos_teclados,
+.productos_mouses {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
-.productos_teclados .titulo_teclados, .productos_teclados .titulo_mouses, .productos_mouses .titulo_teclados, .productos_mouses .titulo_mouses {
+.productos_teclados .titulo_teclados,
+.productos_teclados .titulo_mouses,
+.productos_mouses .titulo_teclados,
+.productos_mouses .titulo_mouses {
   width: 100%;
   text-align: center;
 }
